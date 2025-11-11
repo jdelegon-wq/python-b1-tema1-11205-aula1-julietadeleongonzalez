@@ -41,8 +41,18 @@ Exemple:
 
 def fibonacci(fibonacci_number):
     # Write here your code
-    pass
+    try:
+        fibonacci_number = int(fibonacci_number)
+    except: 
+        return ("TypeError: El valor introducido no es numérico")
+                              
+    if fibonacci_number < 0:
+        return ("ValueError: El valor es inferior a cero")
+    elif fibonacci_number == 1 or fibonacci_number == 2:
+        return 1
+    else: 
+        return fibonacci(fibonacci_number - 1) + fibonacci(fibonacci_number - 2)
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(fibonacci(10))
+print(fibonacci(10))
