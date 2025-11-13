@@ -37,7 +37,7 @@ def count_vowels(text_chain:str):
     # Write here your code
     contador_vocales = 0
     for vowel in text_chain.lower():
-        if vowel == 'aeiou':
+        if vowel in "aeiou":
             contador_vocales += 1
         return contador_vocales
 
